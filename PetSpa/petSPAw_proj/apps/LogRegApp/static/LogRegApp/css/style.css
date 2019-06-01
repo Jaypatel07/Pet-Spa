@@ -1,0 +1,146 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+.wrapper {
+    margin: 0px auto;
+    width: 1366px;
+    height: 868px;
+    background-color: #212529;
+}
+.wrapper h4 {
+    text-align: center;
+    color: white;
+    margin-top: 10px;
+}
+.header {
+    width: 1366px;
+    height: 100px;
+    background-color: #f5f5f5;
+}
+.topleft {
+    width: 680px;
+    height: 100px;
+    display: inline-block;
+    vertical-align: top;
+}
+.topleft img {
+    width: 125px;
+    height: auto;
+    background-size: contain;
+}
+.topright {
+    width: 680px;
+    height: 100px;
+    display: inline-block;
+}
+ul.breadcrumb {
+    padding: 10px 16px;
+    list-style: none;
+    line-height: 80px;
+    margin-left: 345px;
+    background-color: #f5f5f5;
+}
+ul.breadcrumb li {
+    display: inline;
+    font-size: 18px;
+}
+
+ul.breadcrumb li+li:before {
+    padding: 8px;
+    color: black;
+    content: "\00a0";
+}
+ul.breadcrumb li a {
+    color: black;
+    text-decoration: none;
+}
+ul.breadcrumb li a:hover {
+    text-decoration: underline;
+}
+.footer {
+    width: 1366px;
+    background-color: #f5f5f5;
+    line-height: 100px;
+    text-align: center;
+    font-weight: lighter;
+}
+
+.footer li {
+    display: inline;
+    margin-left: 10px;
+}
+.footer li a:hover {
+    text-decoration: underline;
+}
+.footer li a {
+    color: black;
+    text-decoration: none;
+}
+.wrapper {
+    margin: 0px auto;
+    width: 1366px;
+    height: 868px;
+}
+.wrapper h1 {
+    margin-left: 15px;
+    font-weight: normal;
+    
+}
+.logreg_content {
+    margin: 0 auto;
+    height: 668px;
+    width: 1366px;  
+}
+.registering, .loggingin {
+    display: inline-block;
+    vertical-align: top;
+    width: 300px;
+    height: 400px;
+    border-radius: 10px;
+    margin-left: 15px;
+    margin-right: 10px;
+  
+}
+
+.log_reg_form {
+    margin: 0 auto;
+    width: 700px;
+    height: 475px;
+    margin-top: 70px;
+    background-color: white;
+    border-radius: 10px; 
+}
+
+.log_reg_form h5 {
+    margin-top: 10px;
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+}
+
+.frontform {
+    margin-left: 10px;
+}
+
+.frontform label {
+    display: inline-block;
+    width: 100px;
+    text-align: left;
+    margin-top: 2px;
+    line-height: 30px;
+    font-size: 12px;
+}
+
+.frontform input :not(.RegLogButton) {
+    display: inline-block;
+    width: 100px;
+    text-align: left;
+}
+
+.RegLogButton {
+    width: 75px;
+    height: 30px;
+    margin-left: 190px;
+    margin-top: 10px;
+
+}

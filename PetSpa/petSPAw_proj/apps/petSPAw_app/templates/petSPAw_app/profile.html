@@ -1,0 +1,43 @@
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Pet Spa | Pet Profile</title>
+        {% load static %}
+        <link rel="stylesheet" href="{% static 'petSPAw_app/css/profile.css' %}">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    </head>
+    <body>
+        <div class="wrapper">
+                <div class="header">
+                        <div class="topleft">
+                            <img src="{% static 'petSPAw_app/images/logo_transparent.png' %}" alt="Pet Spa Logo">
+                        </div>
+                        <div class="topright">
+                            <ul class="breadcrumb">
+                                <li><a href="/dashboard">DASHBOARD</a></li>
+                                <li><a href="/logout">LOGOUT</a></li>
+                            </ul>
+                        </div>
+            </div> 
+            <div class="mainContent">
+                <div class="profile">
+                   {% if pet %}
+                        <p> Name: {{pet.name}}</p><br>
+                        <p> Age: {{pet.age}}</p><br>
+                        <p> Breed: {{pet.breed}}</p><br>
+                        <p> Comments: {{pet.comments}}</p><br>
+                   {% endif %}
+                </div>
+            </div>    
+        <div class="footer">
+                <ul>
+                    <li>Call Us: +1 777-777-7777</li>
+                    <li>Email Us: petspa@customerservice.com</li>
+                    <li class="footer_location"><a href="/AboutUs">Location:</a> </li>
+                    <li>Coding Dojo - 1715 114th Ave SE #100, Bellevue WA 98004</li>
+                </ul>
+        </div>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,66 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'petSPAw_app/css/dashboard.css' %}">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css?family=Poppins&display=swap" rel="stylesheet"> 
+</head>
+<body>
+    <div class="wrapper">
+        <div class="header">
+            <div class="topleft">
+                <img src="{% static 'petSPAw_app/images/logo_transparent.png' %}" alt="Pet Spa Logo">
+            </div>
+            <div class="topright">
+                <ul class="breadcrumb">
+                    <li><a href="/dashboard">DASHBOARD</a></li>
+                    <li><a href="/logout">LOGOUT</a></li>
+                    <li><a href="dashboard/add" class= "addPet">ADD PET</a></li>
+                    
+            
+                </ul>
+            </div>
+        </div> 
+        <h4>Add your pet to save time when you come in! </h4>
+        
+        <div class="mainContent">
+            <div class="mainLeft">
+                <img src="{% static 'petSPAw_app/images/puppy.jpg' %}" alt="Image of puppy">
+                <img src="{% static 'petSPAw_app/images/cat.jpg' %}" alt="Image of cat">
+            </div>
+            <div class="mainRight">
+                <div class="petTable">
+                    <h5>Your Pets:</h5>
+                    <table>
+                        <tr>
+                            <th>Pet</th>
+                            <th>Action</th>
+                        </tr>
+                        {% for pet in pets %}
+                        <tr>
+                            <td>{{pet.name}}</td>
+                            <td><a href='dashboard/profile/{{pet.id}}'>Profile</a> | <a href='dashboard/edit/{{pet.id}}'>Edit Profile</a> | <a href='dashboard/appointment/{{pet.id}}'>Book Appointment</a></td>
+                        {% endfor %} 
+                        </tr>    
+                    </table>
+                
+            </div>
+        </div>
+        <div class="lowerContent">
+
+        </div>
+             
+        <div class="footer">
+                <ul>
+                    <li>Call Us: +1 777-777-7777</li>
+                    <li>Email Us: petspa@customerservice.com</li>
+                    <li class="footer_location"><a href="/AboutUs">Location:</a> </li>
+                    <li>Coding Dojo - 1715 114th Ave SE #100, Bellevue WA 98004</li>
+                </ul>
+            </div>
+    </div>
+</body>
+</html>

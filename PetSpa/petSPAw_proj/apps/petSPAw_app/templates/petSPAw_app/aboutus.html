@@ -1,0 +1,49 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Pet Spa | About Us</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'petSPAw_app/css/aboutus.css' %}">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="header">
+            <div class="topleft">
+                <img src="{% static 'petSPAw_app/images/logo_transparent.png' %}" alt="Pet Spa Logo">
+            </div>
+            <div class="topright">
+                <ul class="breadcrumb">
+                    <li><a href="/">HOME</a></li>
+                    <li><a href="/AboutUs">ABOUT US</a></li>
+                    <li><a href="/welcome">SIGN UP</a></li>
+                </ul>
+            </div>
+        </div> 
+        <div class="map_box">
+            <iframe width="500" height="500" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?q=place_id:ChIJnzcnsYF3CEERfCpMik2F1kQ&key=AIzaSyAT8QylnHktxBso400ncBiHfoxPA9F8tx8" allowfullscreen></iframe>
+        </div>
+        <div class="about_text">
+            <h4>About Us</h4>
+            <p>Pet Spa is a spa for dogs and cats located in Bellevue, Washington. We provide many services for your pet's grooming and hygeine. Make an account and schedule appointment today!</p>
+            <p>Were you referred? Mention who referred you when you come in for 10% off your total and a complimentary treat for your pet!</p>
+        </div>        
+        <div class="footer">
+            <ul>
+                <li>Call Us: +1 777-777-7777</li>
+                <li>Email Us: petspa@customerservice.com</li>
+                <li class="footer_location"><a href="/AboutUs">Location:</a> </li>
+                <li>Coding Dojo - 1715 114th Ave SE #100, Bellevue WA 98004</li>
+            </ul>
+        </div>
+
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Pet Spa | Home</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'petSPAw_app/css/home.css' %}">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="header">
+            <div class="topleft">
+                <img src="{% static 'petSPAw_app/images/logo_transparent.png' %}" alt="Pet Spa Logo">
+            </div>
+            <div class="topright">
+                <ul class="breadcrumb">
+                    <li><a href="/">HOME</a></li>
+                    <li><a href="/AboutUs">ABOUT US</a></li>
+                    <li><a href="/welcome">SIGN UP</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="body_content">
+            <div class="body_img">
+                <img src="{% static 'petSPAw_app/images/IMG_2375.jpg' %}" alt="Picture of Dog">
+            </div>
+            <div class="body_text">
+                <h4>Welcome to Pet Spa<h4>
+                        <h5>Schedule an appointment and bring your furry friend in today!</h5>
+                        <p>Services Include:</p>
+                        <ul>
+                            <li>Fur Cuts</li>
+                            <li>Hydrotherapy</li>
+                            <li>Massage</li>
+                            <li>Premium Baths</li>
+                            <li>Nail Cuts</li>
+                        </ul>
+                        <h5>We only use the highest quality natural products for your pets!</h5>
+            </div>
+        </div>
+        <div class="footer">
+            <ul>
+                <li>Call Us: +1 777-777-7777</li>
+                <li>Email Us: petspa@customerservice.com</li>
+                <li class="footer_location"><a href="/AboutUs">Location:</a> </li>
+                <li>Coding Dojo - 1715 114th Ave SE #100, Bellevue WA 98004</li>
+            </ul>
+           
+        </div>
+    </div>
+</body>
+
+</html>

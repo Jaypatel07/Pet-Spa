@@ -1,0 +1,57 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Add Pet</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'petSPAw_app/css/addPets.css' %}">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="wrapper">
+            <div class="header">
+                    <div class="topleft">
+                        <img src="{% static 'petSPAw_app/images/logo_transparent.png' %}" alt="Pet Spa Logo">
+                    </div>
+                    <div class="topright">
+                        <ul class="breadcrumb">
+                            <li><a href="/dashboard">DASHBOARD</a></li>
+                            <li><a href="/logout">LOG OUT</a></li>
+                        </ul>
+                    </div>
+                </div> 
+        <div class="mainContent">
+            <div class="addForm">
+                <form action="/dashboard/addProcess" method="POST">
+                    {% csrf_token %}
+                    <label for="name">Pet Name: </label>
+                    <input type="text" name="name"><br>
+                    <label for="age">Age: </label>
+                    <input type="text" name="age"><br>
+                    <label for="breed">Breed: </label>
+                    <input type="text" name="breed"><br>
+                    <label for="comments">Comments: </label>
+                    <input type="text" name="comments">
+                    <input type="hidden" name="userid" value="{{request.session.userid}}">
+                    <input type="submit" value="Add"  >
+                </form>
+                {% if messages %}
+                    <ul class="messages">
+                        {% for message in messages %}
+                            <li>{{ message }}</li>
+                        {% endfor %}
+                    </ul>
+                {% endif %}
+            </div>
+        </div>
+        <div class="footer">
+                <ul>
+                    <li>Call Us: +1 777-777-7777</li>
+                    <li>Email Us: petspa@customerservice.com</li>
+                    <li class="footer_location"><a href="/AboutUs">Location:</a> </li>
+                    <li>Coding Dojo - 1715 114th Ave SE #100, Bellevue WA 98004</li>
+                </ul>
+        </div>
+    </div>
+</body>
+</html>
